@@ -1,0 +1,18 @@
+{
+  "default_style": {
+    "positive": "Chinese ink wash painting, elegant literati style, {scene_hint}, minimal composition, soft rice paper texture, subtle ink gradients, restrained brushwork, quiet and contemplative mood, muted ink gray with warm paper tone, clean blank negative space, empty wall area, vertical poster composition, background art only, no text, no calligraphy, no letters, no watermark, no logo, no seal, no stamp",
+    "negative": "text, letters, Chinese characters, calligraphy, handwriting, inscriptions, watermark, logo, seal, stamp, red seal, signature, neon colors, modern city, photorealistic face, cluttered composition, low quality, blurry, distorted architecture"
+  },
+  "category_styles": {
+    "修身": "a quiet ancient study room at night, a single lamp on a wooden desk, bamboo shadows on paper window, scrolls and inkstone, austere and self-disciplined atmosphere",
+    "处世": "misty mountain path and distant pavilion, a small bridge over water, spacious sky, gentle but resilient atmosphere",
+    "治学": "old books and ink brush beside a paper window, morning light, bamboo slips, scholarly calm, clean empty space",
+    "识人": "distant figures beside a riverside pavilion, subtle chessboard on stone table, layered mountains, observant and composed atmosphere",
+    "持家": "traditional courtyard at dusk, warm lantern light, old wooden door, quiet family study, simple and frugal atmosphere"
+  },
+  "layout_notes": {
+    "ratio": "4:5",
+    "recommended_size": "1080x1350",
+    "text_policy": "Generate background without text. Overlay Chinese quote and vernacular in Python."
+  }
+}
