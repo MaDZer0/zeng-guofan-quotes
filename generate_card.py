@@ -250,7 +250,7 @@ def main() -> None:
     parser.add_argument("--quote-id", help="指定 quotes.json 中的语录 ID")
     parser.add_argument("--category", help="指定分类：修身/处世/治学/识人/持家")
     parser.add_argument("--offline", action="store_true", help="不调用 fal.ai，使用本地水墨占位背景")
-    parser.add_argument("--endpoint", default="fal-ai/flux/schnell", help="fal.ai 模型 endpoint")
+    parser.add_argument("--endpoint", default="fal-ai/flux-2/klein/9b", help="fal.ai 模型 endpoint")
     args = parser.parse_args()
 
     quote = pick_quote(load_quotes(), args.quote_id, args.category)
