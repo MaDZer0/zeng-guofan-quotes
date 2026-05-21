@@ -45,6 +45,10 @@ def load_quotes() -> list[Quote]:
     return [Quote(**row) for row in rows]
 
 
+def already_generated(quote_id: str) -> bool:
+    return (OUTPUT_DIR / f"{quote_id}_card.png").exists()
+
+
 def pick_quote(quotes: list[Quote], quote_id: str | None, category: str | None) -> Quote:
     if quote_id:
         for quote in quotes:
@@ -52,12 +56,15 @@ def pick_quote(quotes: list[Quote], quote_id: str | None, category: str | None) 
                 return quote
         raise SystemExit(f"未找到语录 ID: {quote_id}")
 
-    candidates = quotes
+    candidates = [q for q in quotes if not already_generated(q.id)]
     if category:
-        candidates = [quote for quote in quotes if quote.category == category]
+        candidates = [quote for quote in candidates if quote.category == category]
         if not candidates:
             available = "、".join(sorted({quote.category for quote in quotes}))
             raise SystemExit(f"未找到分类: {category}。可用分类：{available}")
+
+    if not candidates:
+        raise SystemExit("所有语录卡片均已生成，没有待生成的语录了。")
 
     return random.choice(candidates)
 
